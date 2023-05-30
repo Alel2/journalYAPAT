@@ -26,6 +26,9 @@ select * from `Roles`;]]></console>
   <component name="DBNavigator.Project.DatabaseFileManager">
     <open-files />
   </component>
+  <component name="DBNavigator.Project.DatasetFilterManager">
+    <filter-actions connection-id="8e4f5155-6710-4c44-b881-40aa34cd7b04" dataset="rybin1_jurYPAT.Roles" active-filter-id="" />
+  </component>
   <component name="DBNavigator.Project.ExecutionManager">
     <retain-sticky-names value="false" />
   </component>
