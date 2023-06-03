@@ -16,7 +16,7 @@ public class RoleController extends Role {
         //длина HashMap<Integer, String> находится с помощью метода size()
         role.allRoles().forEach((Integer id, String name) ->
                 {
-                    System.out.println(id + "  |  " + name);
+                    System.out.println(id + " | " + name);
                 }
         );
 
@@ -26,7 +26,7 @@ public class RoleController extends Role {
         Role role = new Role();
         System.out.println("№ | Имя РОЛИ");
         System.out.println();
-        System.out.print(role.getId() + "|" + role.getName());
+        System.out.print(role.getId() + " | " + role.getName());
         System.out.println();
     }
 

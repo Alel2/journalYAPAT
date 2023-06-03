@@ -1,6 +1,7 @@
 package Main.ConfigDataBase;
 
 public class ConstDB {
+
     //константы обозначающие имя таблицы Roll и её столбцы(поля)
     public static final String ROLE_TABLE = "Roles";
     public static final String ROLE_TABLE_ID = "id";
@@ -13,5 +14,8 @@ public class ConstDB {
     public static final String TABLE_USERS_LOGIN = "login";
     public static final String TABLE_USERS_PASSWORD = "password";
 
-
+    //дисциплины
+    public static final String TABLE_DISC = "Disciplines";
+    public static final String TABLE_DISC_ID = "id";
+    public static final String TABLE_DISC_NAME = "name";
 }

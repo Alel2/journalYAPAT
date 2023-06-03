@@ -1,19 +1,21 @@
 package Main;
 
-
 import java.lang.reflect.InvocationTargetException;
 import java.sql.SQLException;
 import java.util.Scanner;
 
 import static Main.ConfigDataBase.DataBaseConnection.getdbConnect;
+import static Main.Controlers.DisciplineController.*;
 import static Main.Controlers.RoleController.*;
+import static Main.Controlers.UserController.addUsers;
 import static Main.Controlers.UserController.getAllUsers;
 
 public class Main {
     public static void main(String[] args) throws SQLException, ClassNotFoundException, InvocationTargetException, NoSuchMethodException, InstantiationException {
-        //вывод всех ролей
+
+        // вывод всех ролей
 //        getAllRoles();
-//        //ввод одной роли
+        // ввод одной роли
 //        addRole();
 //        System.out.println("----------------");
 //        //вывод всех ролей
@@ -28,7 +30,14 @@ public class Main {
 //        Integer id = input.nextInt();
 //        getOneRole(id);
 
-        getAllUsers();
+        // вывод всех ролей
+//        getAllUsers();
+//        getAllRoles();
+//        addUsers();
+//      addDiscipline();
+//        updateDiscipline();
+        getOneDisciplines();
+
 
     }
 }

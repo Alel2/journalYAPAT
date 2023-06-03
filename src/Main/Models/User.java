@@ -6,7 +6,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-import static Main.ConfigDataBase.ConstDB.TABLE_USERS;
+import static Main.ConfigDataBase.ConstDB.*;
 import static Main.ConfigDataBase.DataBaseConnection.getdbConnect;
 
 public class User {
@@ -41,8 +41,11 @@ public class User {
     //
     public User[] getAll() throws SQLException, ClassNotFoundException {
 
+        //Это запрос на получение КОЛИЧЕСТВА ЗАПИСЕЙ (СТРОК) Таблицы <-> ДЛИНА массива
         String sql = "SELECT COUNT(*) AS count FROM " + TABLE_USERS;
+
         Statement statement = getdbConnect().createStatement();
+
         ResultSet count = statement.executeQuery(sql);
 
         Integer countUsers = 0;
@@ -69,7 +72,23 @@ public class User {
     }
 
     //метод вывода одной записи
+    public void add(Integer roleId, String nameUser, String loginUser, String passwordUser) throws SQLException, ClassNotFoundException {
 
+        String query = "INSERT INTO " + TABLE_USERS + " (" + TABLE_USERS_ROLE_ID + ","
+                + TABLE_USERS_NAME + ","
+                + TABLE_USERS_LOGIN + ","
+                + TABLE_USERS_PASSWORD + ") VALUES ("
+                + roleId + ",'" + nameUser + "','" + loginUser + "','" + passwordUser + "')";
+
+        //Необязателен- выводит строку с запросом
+        System.out.println(query);
+
+        Statement statement = getdbConnect().createStatement();
+
+        statement.executeUpdate(query);
+
+
+    }
 
     //метод вывода одной записи
 
@@ -81,7 +100,6 @@ public class User {
 
 
     //геттеры
-
     public Integer getIdUser() {
         return idUser;
     }
